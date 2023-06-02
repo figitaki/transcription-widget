@@ -47,7 +47,7 @@ use the following format:
 ```js
 var options = {
   summary: "string",
-  timestamps: [{ time: "text", text: "string" }],
+  timestamps: [{ time: "string", text: "string" }],
 };
 ```
 
