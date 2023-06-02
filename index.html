@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Transcription Widget Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- import our transcription widget -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <h1>Transcription Widget</h1>
+    <p>Demonstration of the transcription widget and it's various states.</p>
+
+    <p>Toggle the translation widget:</p>
+    <button onClick="toggle()">Toggle</button>
+
+    <p>Toggle various attributes</p>
+    <button onClick="toggleDarkMode()">Toggle dark mode</button>
+    <button onClick="toggleSummary()">Toggle summary</button>
+    <button onClick="toggleTranslation()">Toggle translation</button>
+
+    <transcription-widget summary translation></transcription-widget>
+
+    <script>
+      // Configure the transcription widget
+      var transcription = document.querySelector("transcription-widget");
+      transcription.options = {
+        summary:
+          "Built for web agencies. Install one line script and collab on live websites like you do on Google Docs or Figma.",
+        timestamps: [
+          {
+            time: "0:15",
+            text: "The website is looking great, I’d like to discuss a few changes.",
+          },
+          {
+            time: "0:30",
+            text: "There’s new copy that’s been uploaded in Google Docs. Let’s transfer it to our website.",
+          },
+          {
+            time: "0:45",
+            text: "The second change is are the animations. Use the inspiration from the website I showed in our meeting.",
+          },
+        ],
+      };
+
+      function toggle() {
+        transcription.toggle();
+      }
+
+      function toggleDarkMode() {
+        transcription.toggleAttribute("dark");
+      }
+
+      function toggleSummary() {
+        transcription.toggleAttribute("summary");
+      }
+
+      function toggleTranslation() {
+        transcription.toggleAttribute("translation");
+      }
+
+      document.addEventListener("copy", console.log);
+    </script>
+  </body>
+</html>
