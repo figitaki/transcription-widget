@@ -6,10 +6,10 @@
 
 To use the transcription widget, follow these steps:
 
-1. Include the script on your webpage, preferably in the header using `defer`.
+1. Include the script on your webpage. Preferably in the `<head>` using `defer`.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/figitaki/transcription-widget@0.0.1/main.js" defer />
+<script src="https://cdn.jsdelivr.net/gh/figitaki/transcription-widget@0.0.1/main.js" defer></script>
 ```
 
 2. Include the custom element in the body of your HTML or JSX document.
